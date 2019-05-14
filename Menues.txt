@@ -1,0 +1,94 @@
+Menu Principal
+1 - Archivos maestros
+        1 - Maestro de propietarios
+            ABM:
+                ·Codigo de propietario
+                ·Nombre
+                ·Nª de C.U.I.T.
+                ·Condicion
+                ·Ingresos Brutos
+                ·Domicilio legal
+                ·Telefono
+                ·Cia de Seguro
+                ·Numero de poliza
+                ·Vencimiento de poliza
+                ·Habilitacion Municipal
+                ·Habilitacion provincial
+
+        2 - Maestro de unidades
+            ABM:
+                ·Codigo de la unidad
+                ·Marca
+                ·Modelo
+                ·Dominio
+                ·Porcentaje de agencia
+                ·Propietario
+
+        3 - Maestro de choferes
+        4 - Maestro de clientes
+        5 - Formas de pago
+        6 - Rubros de las Cuentas
+        7 - Maestro de las cuentas
+        8 - Maestro de descuentos
+        9 - Maestro de condiciones de viaje
+            ABM:
+                ·Numero
+                ·Condicion de viaje
+                ·Abreviatura
+                ·Procentaje de comision
+                ·Detalle
+
+            Registros actuales:
+                ·Viaje normal     VN    15
+                ·Viaje cortesia   VC    15  3T3
+                ·Anulado          AA    0
+                ·Cuenta corriente CC    15
+                ·Sin cargo        SC    0
+                ·Solicitado       SO    15
+                ·NEGATIVO         NG    0
+                ·HOTEL            HO    20  ESTADISTICAS HOTELES
+
+        T - Tarifa minima y espera
+            ABM:
+                ·Minutos libres (Son los minutos sin cargo, generalmente 5')
+                ·Espera (Son minutos, Ej: 15 minutos. Cada 15 min. se cobra los $$$ de abajo)
+                ·Valor espera (Valor ej: $20.-, si se cobra cada 15' $10)
+                ·Valor parada (Es el importe en $ por cada aprada)
+                ·Codigo minimo (es el codigo mas bajo que se puede cobrar)
+
+        M - Maestro de hoteles
+            ABM:
+                ·Nro hotel
+                ·Nombre hotel
+                ·Abrev. hotel
+                ·Comision
+
+        F - Retorno menu anterior
+        (Los maestros representan las tablas principales)
+
+2 - Planilla de operaciones
+3 - Plan de cuentas o caja diaria
+4 - Cuentas corrientes
+5 - Gestion administrativa
+6 - Balances generales entre fechas
+9 - Estadisticas generales
+      1 - Viajes por hora entre fechas
+      2 - Viajes por origen
+      3 - Resumen general
+      4 - Ranking por unidad
+      5 - Cantidad de Viajes
+      6 - Ranking choferes
+      F - Retorno menu anterior
+
+V - Tareas varias o auxiliares
+M - Mantenimiento de Archivos
+      1 - Ordenamiento de Archivos
+      2 - Copia de seguridad a disco rigido
+      3 - Copia de seguridad a Diskette
+      4 - Actualiza archivos maestros
+      5 - Actualiza archivos Planilla
+      6 - Eliminacion de datos
+      7 - Instalacion y configuracion
+      R - Retorno menu anterior
+
+F - Finalizacion de Tareas
