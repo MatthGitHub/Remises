@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1300.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="ar.com.remises.LoginController">
+    <stylesheets>
+        <URL value="@../style/Login.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="anchorPane2" layoutX="460.0" layoutY="169.0" prefHeight="300.0" prefWidth="470.0" styleClass="top-segment" visible="true" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="215.5" AnchorPane.rightAnchor="215.5" AnchorPane.topAnchor="94.0">
+         <children>
+            <VBox id="VBox" alignment="CENTER" prefHeight="300.0" prefWidth="470.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane id="AnchorPane" maxHeight="300.0" maxWidth="470.0" prefHeight="278.0" prefWidth="415.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" layoutX="0.0" layoutY="0.0" prefHeight="38.0" prefWidth="470.0000999999975">
+                           <children>
+                              <Hyperlink fx:id="logout" onAction="#logOut" styleClass="logout" text="Logout" underline="true" visible="false" visited="false" />
+                           </children>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </HBox>
+                        <Pane fx:id="errorPanel" layoutX="-5.0" layoutY="38.0" opacity="0.0" prefHeight="161.99990000000253" prefWidth="475.0" visible="false">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="200.0" prefWidth="478.0">
+                                 <children>
+                                    <Label fx:id="labelError" text="" textAlignment="CENTER" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="serverSicom" layoutX="-2.0" layoutY="38.0" opacity="0.0" prefHeight="162.0" prefWidth="470.0" visible="false" />
+                        <Pane fx:id="loginSicom" layoutX="-2.0" layoutY="38.0" opacity="1.0" prefHeight="162.0" prefWidth="470.0" visible="true">
+                           <children>
+                              <Label id="label1" layoutX="18.0" layoutY="60.0" text="Usuario" />
+                              <TextField id="textField1" fx:id="usuario" layoutX="4.0" layoutY="79.0" prefWidth="225.0" promptText="usuario" text="" />
+                              <Label id="label1" layoutX="259.0" layoutY="60.0" text="Contraseña" visible="true" />
+                              <PasswordField id="passwordField1" fx:id="password" layoutX="249.0" layoutY="79.0" prefWidth="225.0" promptText="contraseña" text="" />
+                              <Button id="button1" fx:id="login" defaultButton="true" layoutX="307.0" layoutY="132.0" minHeight="31.0" onAction="#processLogin" prefHeight="31.0" prefWidth="167.0" text="Login" />
+                           </children>
+                           <rotationAxis>
+                              <Point3D z="1.0" />
+                           </rotationAxis>
+                        </Pane>
+                        <HBox alignment="CENTER" layoutX="0.0" layoutY="201.0" prefHeight="38.0" prefWidth="470.0">
+                           <children>
+                              <Label fx:id="errorMessage" text="" />
+                           </children>
+                        </HBox>
+                        <HBox fx:id="loadingLogin" alignment="CENTER" layoutX="208.0" layoutY="225.0" prefHeight="52.0" prefWidth="63.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

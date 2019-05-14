@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/05/2016, 15:08:08
+    Author     : claudio
+*/
+
+.background {
+/*
+    -fx-background-color:
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#000, #000),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));    
+        */
+        /*
+    -fx-background-color:#ff0000;    
+        */
+    -fx-background-color:#FFF;       
+    
+    -fx-fill:#FFF;
+}
+
+.label.titDownComd .text{
+    -fx-fill:#000;
+    -fx-font-size: 18px;
+    -fx-font-family: "Arial";
+    /*-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );*/
+    -fx-font-style: normal;
+    -fx-font-weight: bold;
+}
+.label .text{
+    -fx-font-style: italic;
+}
+.top-segment {
+    /*
+    -fx-border-color: 
+        transparent transparent rgba(255, 255, 255, 0.08) transparent,
+        transparent transparent rgba(0, 0, 0, 0.5) transparent;
+    -fx-border-width: 1, 1.5;
+    -fx-border-insets: -1, 0; 
+    */
+}
+
+.background .closeButton{
+
+    -fx-background-color: 
+        linear-gradient(#ffd65b, #e68400),
+        linear-gradient(#ffef84, #f2ba44),
+        linear-gradient(#ffea6a, #efaa22),
+        linear-gradient(#ffe657 0%, #f8c202 50%, #eea10b 100%),
+        linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,2,3,0;
+    -fx-text-fill: #654b00;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 5 20 5 20; 
+    -fx-cursor: hand;
+}
+.background .closeButton .text{
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+.background .closeButton:hover{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}

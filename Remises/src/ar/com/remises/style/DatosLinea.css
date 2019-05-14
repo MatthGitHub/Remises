@@ -1,0 +1,232 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/03/2016, 10:41:40
+    Author     : claudio
+*/
+
+
+.background {
+    -fx-background-color: #eeeeee;
+    -fx-fill:#FFF;
+}
+
+.top-segment {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-border-color: 
+        transparent transparent rgba(255, 255, 255, 0.08) transparent,
+        transparent transparent rgba(0, 0, 0, 0.5) transparent;
+    -fx-border-width: 1, 1.5;
+    -fx-border-insets: -1, 0; 
+}
+
+.contentTab .label {
+    -fx-effect: dropshadow( one-pass-box , #fff, 0, 0.0 , 0 , 1 );
+}
+
+.label .text{
+    -fx-fill:#6d6d6d;
+    -fx-font-weight: bold;
+}
+.label.addDesc .text{
+    -fx-font-weight: normal;
+    -fx-font-size: 14;
+}
+.check-box .box {
+    -fx-background-color:
+        rgba(255, 255, 255, 0.1),
+        rgba(0, 0, 0, 1),
+        -fx-outer-border,
+        -fx-inner-border,
+        -fx-body-color;
+    -fx-background-insets: 0 -1.6 -2 -1.6, -1.4, 0, 1, 2;
+}
+
+.check-box:focused .box {
+    -fx-background-color:
+        rgba(255, 255, 255, 0.15),
+        rgba(0, 0, 0, 0.8),
+        -fx-outer-border,
+        -fx-inner-border,
+        white;
+}
+.button{
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    /*-fx-background-radius: 5,4,3,5;*/
+    -fx-background-radius: 20;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 15px;
+    -fx-padding: 10 20 10 20;  
+    -fx-cursor: hand;
+}
+.button:focused, .button:hover {
+    -fx-background-color:
+        rgba(255, 255, 255, 0.08),
+        rgba(0, 0, 0, 0.8),
+        #090a0c,
+        linear-gradient(#4a5661 0%, #1f2429 20%, #1f242a 100%),
+        linear-gradient(#3f4950, #23282e),
+        radial-gradient(center 50% 0%, radius 100%, rgba(135,142,148,0.9),
+        rgba(255,255,255,0));
+}
+.button .text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 );
+    /*-fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.8), 0, 0.0 , 0 , -1 );*/
+}
+
+.text-field, .text-area {
+    -fx-font-size: 14;
+    -fx-background-color:
+        rgba(255, 255, 255, 0.3),
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 50%),
+        rgb(218, 226, 224);
+    -fx-background-insets: 0 0 -1 0, 0, 1;
+    /*-fx-background-radius: 6, 5, 4;*/
+    -fx-background-radius: 15;
+    -fx-padding: 6 10 4 10;
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.8), 5, 0, 0, 2 );
+    -fx-font-family: "Arial";
+}
+.text-field {
+    -fx-min-height: 24;
+}
+
+.text-area {
+    -fx-padding: 6 5 6 5;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-prompt-text-fill:
+        rgb(128,128,128);
+    -fx-background-color:
+        rgba(235, 235, 235, 0.5),
+        rgba(0, 0, 0, 0.4),
+        rgb(255, 255, 255);
+}
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 1;
+    -fx-background-color: #20262b;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:90px;
+}
+
+.tab{
+    /*-fx-background-insets: 0 1 0 1,0,0;*/
+}
+.tab-pane .tab
+{
+    -fx-background-color: transparent;
+    -fx-border-color: 
+        transparent transparent transparent transparent,
+        transparent transparent transparent transparent;
+    -fx-border-width: 4, 1.5;
+    -fx-border-insets: -1, 0;   
+    -fx-focus-color: transparent;
+    -fx-cursor: hand;
+}
+
+.tab-pane .tab:selected
+{
+    /*-fx-background-color: #3c3c3c;*/
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #a7a7a7;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+.tab-pane .tab:selected{
+    -fx-border-color: 
+        transparent transparent #FFF transparent,
+        transparent transparent #FFF transparent;
+  
+}
+.tab:selected .tab-label { 
+    -fx-text-fill: #FFF;
+}
+.tab-pane .contentTab, .tab-pane {
+    -fx-background-color: transparent;
+}
+.tab-pane .contentTab{
+    -fx-background-color: #eeeeee;
+}
+.contPrincipal {
+    -fx-background-color: #eeeeee;
+}
+.tab-pane .tab:focused{
+    -fx-background-color: transparent;
+}
+.vbox1{
+    -fx-background-color: #eeeeee;
+}
+.top{
+    -fx-background-color: #20262b;
+    -fx-padding: 0;
+}
+.top .label .text{
+    -fx-fill: #FFF;
+    -fx-font-size: 15px;
+}
+/*****************************************/
+.combo-box{
+    -fx-font-size: 14;
+    -fx-background-color:
+        rgba(255, 255, 255, 0.3),
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) 50%),
+        rgb(218, 226, 224);
+    -fx-background-insets: 0 0 -1 0, 0, 1.5;
+    /*-fx-background-radius: 6, 5, 4;*/
+    -fx-background-radius: 15;
+    -fx-padding: 2;
+    -fx-effect: innershadow( gaussian, rgba(0, 0, 0, 0.8), 5, 0, 0, 2 );
+    -fx-font-family: "Arial";    
+}
+.combo-box .list-cell {
+    -fx-background: white;
+    -fx-background-color: transparent;
+    -fx-text-fill: #000;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 1.66667em; 
+}
+.combo-box .list-cell:filled:selected { 
+    -fx-text-fill: #000;
+}
+.combo-box-popup .list-view {
+    -fx-background-color: white, white;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+}    
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover 
+{
+    -fx-background-color: #318400;
+    -fx-text-fill: #FFF;
+}
+.combo-box-popup .list-view .list-cell:filled:hover 
+{
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: #FFF;
+}
+/*****************/
+.contentLoading {
+    /*-fx-background-color: #000;*/
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+.hboxLoading{
+    -fx-background-color: #FFF;
+    -fx-background-radius: 10 10 10 10;
+}

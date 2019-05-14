@@ -11,16 +11,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -41,10 +38,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             stage = primaryStage;
-            stage.setTitle("Gestión Comd");
+            stage.setTitle("Remises");
             stage.setMinWidth(Constants.GLOBAL_WINDOW_WIDTH);
             stage.setMinHeight(Constants.GLOBAL_WINDOW_HEIGHT);
-            stage.getIcons().add(new Image("ar/com/tecnoaccion/comd/style/iconota.jpg"));
+            stage.getIcons().add(new Image("ar/com/remises/resources/car-icon.png"));
             stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
                 @Override
                 public void handle(WindowEvent t) {
@@ -64,6 +61,22 @@ public class Main extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+    }
+    
+    public double getwStage() {
+        return wStage;
+    }
+
+    public void setwStage(double wStage) {
+        this.wStage = wStage;
+    }
+
+    public double gethStage() {
+        return hStage;
+    }
+
+    public void sethStage(double hStage) {
+        this.hStage = hStage;
     }
     
     private Initializable replaceSceneContent(String fxml, double width, double height) throws Exception {
@@ -90,27 +103,26 @@ public class Main extends Application {
             sethStage((stage != null && stage.getHeight() != Constants.GLOBAL_WINDOW_HEIGHT) ? stage.getHeight() : Constants.GLOBAL_WINDOW_HEIGHT);
             //double w = (stage != null && stage.getWidth() != Constants.GLOBAL_WINDOW_WIDTH) ? stage.getWidth() : Constants.GLOBAL_WINDOW_WIDTH;
             //double h = (stage != null && stage.getHeight() != Constants.GLOBAL_WINDOW_HEIGHT) ? stage.getHeight() : Constants.GLOBAL_WINDOW_HEIGHT;
-            LoginController loginSicom = (LoginController) replaceSceneContent("loginSicom.fxml", getwStage(), gethStage());
-            loginSicom.setApp(this);
+            LoginController login = (LoginController) replaceSceneContent("views/login.fxml", getwStage(), gethStage());
+            login.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-    public double getwStage() {
-        return wStage;
+    public void gotoHome() {
+        try {
+            setwStage((stage != null && stage.getWidth() != Constants.GLOBAL_WINDOW_WIDTH) ? stage.getWidth() : Constants.GLOBAL_WINDOW_WIDTH);
+            sethStage((stage != null && stage.getHeight() != Constants.GLOBAL_WINDOW_HEIGHT) ? stage.getHeight() : Constants.GLOBAL_WINDOW_HEIGHT);            
+            HomeController home = (HomeController) replaceSceneContent("views/home.fxml", getwStage(), gethStage());
+            home.setApp(Main.this);
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-
-    public void setwStage(double wStage) {
-        this.wStage = wStage;
-    }
-
-    public double gethStage() {
-        return hStage;
-    }
-
-    public void sethStage(double hStage) {
-        this.hStage = hStage;
+    
+    public void backupLogin() {
+        gotoLogin();
     }
     
 }
