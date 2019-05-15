@@ -5,33 +5,26 @@
  */
 package ar.com.remises;
 
+import ar.com.remises.model.Remis;
 import ar.com.remises.services.SeguridadService;
 import ar.com.remises.util.NewWindows;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.collections.ObservableListBase;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyCodeCombination;
-import javafx.scene.input.KeyCombination;
-import javafx.scene.input.Mnemonic;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -49,8 +42,8 @@ public class HomeController implements Initializable {
     @FXML
     private MenuItem bActivarUnidad;
     
-    
     private Main application;
+    private List<Remis> remises;
     
     public void setApp(Main application) {
         this.application = application;
@@ -108,6 +101,11 @@ public class HomeController implements Initializable {
                 Main.openNewWindow("Activar unidad", "views/activarUnidad.fxml", 400, 400);
             }
         });
+    }
+    
+    
+    public void agregarUnidad(Remis nuevaUnidad){
+        
     }
     
 }

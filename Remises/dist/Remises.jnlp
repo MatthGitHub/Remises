@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Remises.jar" size="99954" download="eager" />
+    <jar href="Remises.jar" size="103057" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="ar.com.remises.Main"  name="Remises" />
   <update check="always"/>

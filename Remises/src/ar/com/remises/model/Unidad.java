@@ -9,29 +9,29 @@ package ar.com.remises.model;
  *
  * @author matias
  */
-public class Vehiculo {
+public class Unidad {
     
 
-    private Integer nroVehiculo;
+    private Integer nroUnidad;
     private String modelo;
     private String marca;
 
-    public Vehiculo(){
+    public Unidad(){
         
     }
     
-    public Vehiculo(Integer nroVehiculo, String modelo, String marca) {
-        this.nroVehiculo = nroVehiculo;
+    public Unidad(Integer nroVehiculo, String modelo, String marca) {
+        this.nroUnidad = nroVehiculo;
         this.modelo = modelo;
         this.marca = marca;
     }
 
-    public Integer getNroVehiculo() {
-        return nroVehiculo;
+    public Integer getNroUnidad() {
+        return nroUnidad;
     }
 
-    public void setNroVehiculo(Integer nroVehiculo) {
-        this.nroVehiculo = nroVehiculo;
+    public void setNroUnidad(Integer nroUnidad) {
+        this.nroUnidad = nroUnidad;
     }
 
     public String getModelo() {

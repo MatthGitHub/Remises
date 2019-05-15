@@ -13,14 +13,15 @@ package ar.com.remises.model;
  */
 public class Remis {
     
+    private static int instanciasCreadas;
     private Integer nroRemis;
     private Zona zona;
     private Chofer chofer;
-    private Vehiculo vehiculo;
+    private Unidad vehiculo;
     private Integer orden;
 
-    public Remis(Integer nroRemis, Zona zona, Chofer chofer, Vehiculo vehiculo,Integer orden) {
-        this.nroRemis = nroRemis;
+    public Remis(Zona zona, Chofer chofer, Unidad vehiculo,Integer orden) {
+        this.nroRemis = instanciasCreadas++;
         this.zona = zona;
         this.chofer = chofer;
         this.vehiculo = vehiculo;
@@ -51,11 +52,11 @@ public class Remis {
         this.chofer = chofer;
     }
 
-    public Vehiculo getVehiculo() {
+    public Unidad getVehiculo() {
         return vehiculo;
     }
 
-    public void setVehiculo(Vehiculo vehiculo) {
+    public void setVehiculo(Unidad vehiculo) {
         this.vehiculo = vehiculo;
     }
 

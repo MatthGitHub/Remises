@@ -140,6 +140,13 @@ public class Main extends Application {
         scene.getAccelerators().put(kc, a);
     }
     
+    /**
+     * Abre una nueva ventana
+     * @param title El titulo de la nueva ventana
+     * @param fxml La direccion de FXML
+     * @param width El ancho
+     * @param height El alto
+     */
     public static void openNewWindow(String title,String fxml,double width, double height){
         Parent root;
                 try {
@@ -158,6 +165,7 @@ public class Main extends Application {
                     window.setTitle(title);
                     window.setScene(new Scene(page, width, width));
                     window.sizeToScene();
+                    window.setResizable(false);
                     window.show();
                     // Hide this current window (if this is what you want)
                     //((Node)(event.getSource())).getScene().getWindow().hide();

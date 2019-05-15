@@ -31,11 +31,31 @@ public class ChoferService {
         
         ArrayList<Chofer> choferes = new ArrayList<Chofer>();
         choferes.add(new Chofer(1, "Jose Luis", "Perales", 47));
-        choferes.add(new Chofer(1, "Gaston", "Romero", 26));
-        choferes.add(new Chofer(1, "Juan Roman", "Riquelme", 41));
-        choferes.add(new Chofer(1, "Damian", "Gessel", 21));
-        choferes.add(new Chofer(1, "Romina", "Rosas", 25));
+        choferes.add(new Chofer(2, "Gaston", "Romero", 26));
+        choferes.add(new Chofer(3, "Juan Roman", "Riquelme", 41));
+        choferes.add(new Chofer(4, "Damian", "Gessel", 21));
+        choferes.add(new Chofer(5, "Romina", "Rosas", 25));
         
         return choferes;
+    }
+    
+    public Chofer obtenerChoferPorNumero(Integer nroChofer){
+        ArrayList<Chofer> choferes = cargarChoferes();
+        for(Chofer c : choferes){
+            if(c.getNroChofer()== nroChofer){
+                return c;
+            }
+        }
+        return null;
+    }
+    
+    public Chofer obtenerChoferPorPatron(String patron){
+        ArrayList<Chofer> unidades = cargarChoferes();
+        for(Chofer c : unidades){
+            if(c.getNombre().toLowerCase().contains(patron.toLowerCase()) || c.getApellido().toLowerCase().contains(patron.toLowerCase())){
+                return c;
+            }
+        }
+        return null;
     }
 }

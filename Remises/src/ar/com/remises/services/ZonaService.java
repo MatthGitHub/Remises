@@ -41,4 +41,24 @@ public class ZonaService {
         return zonas;
     }
     
+    public Zona obtenerZonaPorNumero(Integer nroZona){
+        ArrayList<Zona> zonas = cargarZonas();
+        for(Zona z : zonas){
+            if(z.getNroZona()== nroZona){
+                return z;
+            }
+        }
+        return null;
+    }
+    
+    public Zona obtenerZonaPorPatron(String patron){
+        ArrayList<Zona> zonas = cargarZonas();
+        for(Zona z : zonas){
+            if(z.getNombre().toLowerCase().contains(patron.toLowerCase())){
+                return z;
+            }
+        }
+        return null;
+    }
+    
 }
