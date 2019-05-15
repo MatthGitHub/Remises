@@ -23,6 +23,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
@@ -162,7 +163,9 @@ public class Main extends Application {
                     }
                     
                     Stage window = new Stage();
+                    window.initModality(Modality.APPLICATION_MODAL);
                     window.setTitle(title);
+                    window.centerOnScreen();
                     window.setScene(new Scene(page, width, width));
                     window.sizeToScene();
                     window.setResizable(false);

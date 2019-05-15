@@ -121,6 +121,7 @@ public class ActivarUnidadController implements Initializable {
     
     public void activarUnidad(){
         Remis remis = new Remis(zona, chofer, unidad,1);
+        HomeController.agregarUnidad(remis);
     }
     
     private boolean validate(String text){

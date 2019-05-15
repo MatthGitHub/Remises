@@ -26,6 +26,7 @@ and open the template in the editor.
     -fx-background-color: #343434;
     -fx-table-cell-border-color: transparent;   
 }
+
 .table-view:focused, .list-view:focused{
 
 }

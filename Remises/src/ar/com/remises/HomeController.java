@@ -6,27 +6,20 @@
 package ar.com.remises;
 
 import ar.com.remises.model.Remis;
+import ar.com.remises.model.Zona;
 import ar.com.remises.services.SeguridadService;
-import ar.com.remises.util.NewWindows;
-import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 
 /**
  *
@@ -43,7 +36,12 @@ public class HomeController implements Initializable {
     private MenuItem bActivarUnidad;
     
     private Main application;
-    private List<Remis> remises;
+    
+    private static ObservableList<Remis> observableRemises;
+    private static ObservableList<Integer> observableOrden;
+    private static ObservableList<Zona> observableZona;
+    
+    private static Integer orden = 1;
     
     public void setApp(Main application) {
         this.application = application;
@@ -51,10 +49,35 @@ public class HomeController implements Initializable {
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //ObservableList<Integer> ordenar = FXCollections.<Integer>observableArrayList(completarOrden());
-        ordenList.getItems().addAll(completarOrden());
+        inicializarObservables();
         logUser.setText(SeguridadService.getUsuarioLogueado().getNombre()+" "+SeguridadService.getUsuarioLogueado().getApellido());
         inicializarMenu();
+    }
+    
+    public void inicializarObservables(){
+        observableRemises = FXCollections.<Remis>observableArrayList();
+        observableRemises.addListener(new ListChangeListener() {
+            @Override
+            public void onChanged(ListChangeListener.Change c) {
+                disponibleList.getItems().add(observableRemises.get(observableRemises.size()-1));
+            }
+        });
+        
+        observableOrden = FXCollections.<Integer>observableArrayList();
+        observableOrden.addListener(new ListChangeListener() {
+            @Override
+            public void onChanged(ListChangeListener.Change c) {
+                ordenList.getItems().add(observableOrden.get(observableOrden.size()-1));
+            }
+        });
+        
+        observableZona = FXCollections.<Zona>observableArrayList();
+        observableZona.addListener(new ListChangeListener() {
+            @Override
+            public void onChanged(ListChangeListener.Change c) {
+                zonaList.getItems().add(observableZona.get(observableZona.size()-1));
+            }
+        });
     }
     
     public void logOut(ActionEvent event){
@@ -64,34 +87,7 @@ public class HomeController implements Initializable {
     }
     
     public void acercaDe(ActionEvent event){
-        NewWindows.openWindowsAcercaDe();
-    }
-    
-    public static void openWindowsAcercaDe() {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(NewWindows.class.getResource("/ar/com/remises/views/acercaDe.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setMaxWidth(400.0);
-            stage.setMaxHeight(200.0);
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setTitle("Acerca de");
-            stage.setScene(new Scene(root1));
-            stage.centerOnScreen();
-            stage.show();
-        } catch (IOException ex) {
-            Logger.getLogger(NewWindows.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }    
-    
-    public ArrayList<Integer> completarOrden(){
-        ArrayList<Integer> array = new ArrayList<>();
-        for(int i = 1 ; i < 26 ; i++){
-            array.add(i);
-        }
-        
-        return array;
+        Main.openNewWindow("Acerca de", "views/acercaDe.fxml", 400, 200);
     }
     
     private void inicializarMenu(){
@@ -103,9 +99,12 @@ public class HomeController implements Initializable {
         });
     }
     
-    
-    public void agregarUnidad(Remis nuevaUnidad){
-        
+    public static void agregarUnidad(Remis nuevaUnidad){
+        observableOrden.add(orden);
+        System.out.println("Orden: "+orden);
+        observableRemises.add(orden-1,nuevaUnidad);
+        orden++;
+        System.out.println("Se agrega remo: "+nuevaUnidad.toString());
     }
     
 }

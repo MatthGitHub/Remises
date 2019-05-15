@@ -17,14 +17,14 @@ public class Remis {
     private Integer nroRemis;
     private Zona zona;
     private Chofer chofer;
-    private Unidad vehiculo;
+    private Unidad unidad;
     private Integer orden;
 
-    public Remis(Zona zona, Chofer chofer, Unidad vehiculo,Integer orden) {
+    public Remis(Zona zona, Chofer chofer, Unidad unidad,Integer orden) {
         this.nroRemis = instanciasCreadas++;
         this.zona = zona;
         this.chofer = chofer;
-        this.vehiculo = vehiculo;
+        this.unidad = unidad;
         this.orden = orden;
     }
 
@@ -52,12 +52,12 @@ public class Remis {
         this.chofer = chofer;
     }
 
-    public Unidad getVehiculo() {
-        return vehiculo;
+    public Unidad getUnidad() {
+        return unidad;
     }
 
-    public void setVehiculo(Unidad vehiculo) {
-        this.vehiculo = vehiculo;
+    public void setUnidad(Unidad unidad) {
+        this.unidad = unidad;
     }
 
     public Integer getOrden() {
@@ -66,6 +66,11 @@ public class Remis {
 
     public void setOrden(Integer orden) {
         this.orden = orden;
+    }
+    
+    @Override
+    public String toString(){
+        return chofer.getNroChofer().toString();
     }
     
 }

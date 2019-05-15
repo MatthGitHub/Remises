@@ -150,12 +150,12 @@
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ListView fx:id="disponibleList" prefHeight="44.0" prefWidth="871.0" />
+                                          <ListView fx:id="disponibleList" orientation="HORIZONTAL" prefHeight="44.0" prefWidth="871.0" />
                                        </children>
                                     </HBox>
                                     <HBox prefHeight="100.0" prefWidth="200.0">
                                        <children>
-                                          <ListView fx:id="zonaList" prefHeight="44.0" prefWidth="897.0" />
+                                          <ListView fx:id="zonaList" orientation="HORIZONTAL" prefHeight="44.0" prefWidth="897.0" />
                                        </children>
                                     </HBox>
                                  </children>

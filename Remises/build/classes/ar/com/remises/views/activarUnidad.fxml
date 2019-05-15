@@ -133,6 +133,6 @@
             </HBox>
          </children>
       </VBox>
-      <Button fx:id="btnActivarUnidad" disable="true" layoutX="152.0" layoutY="339.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="106.0" text="Activar" />
+      <Button fx:id="btnActivarUnidad" disable="true" layoutX="152.0" layoutY="339.0" mnemonicParsing="false" onAction="#activarUnidad" prefHeight="26.0" prefWidth="106.0" text="Activar" />
    </children>
 </AnchorPane>
