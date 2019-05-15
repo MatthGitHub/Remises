@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30/03/2016, 12:45:10
+    Author     : claudio
+*/
+
+.background {
+    -fx-background-image: url("CoarseGrid.png");
+    -fx-background-repeat: repeat;
+    -fx-background-color:
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));      
+    /*-fx-background-color: #4c4d53;*/
+    -fx-fill:#FFF;
+}
+.label .text{
+    -fx-fill:#FFF;
+}
+.top-segment {
+    -fx-border-color: 
+        transparent transparent rgba(255, 255, 255, 0.08) transparent,
+        transparent transparent rgba(0, 0, 0, 0.5) transparent;
+    -fx-border-width: 1, 1.5;
+    -fx-border-insets: -1, 0; 
+}
+.titItem{
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+}
+.labelDl{
+    -fx-font-weight: bold;
+    -fx-opacity: 0.6;    
+}
+.labelData{
+    -fx-font-weight: bold;
+}
+.labelDl, .labelData, .titItem{
+    -fx-text-fill: rgba(255, 255, 255, 0.4);
+    -fx-effect: dropshadow( one-pass-box , rgba(0, 0, 0, 0.6), 0, 0.0 , 0 , 1 );
+}

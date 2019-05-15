@@ -5,29 +5,33 @@
  */
 package ar.com.remises;
 
-import ar.com.remises.services.ZonaService;
+import ar.com.remises.services.SeguridadService;
 import ar.com.remises.util.NewWindows;
-import com.sun.javafx.geom.BaseBounds;
-import com.sun.javafx.geom.transform.BaseTransform;
-import com.sun.javafx.jmx.MXNodeAlgorithm;
-import com.sun.javafx.jmx.MXNodeAlgorithmContext;
-import com.sun.javafx.sg.prism.NGNode;
-import com.sun.org.apache.xerces.internal.impl.xs.opti.DefaultNode;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.collections.ObservableListBase;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.HBox;
+import javafx.scene.control.MenuItem;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
+import javafx.scene.input.Mnemonic;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -41,7 +45,10 @@ public class HomeController implements Initializable {
     @FXML
     private Label logUser,version;
     @FXML
-    private ListView ordenList;
+    private ListView disponibleList,zonaList,ordenList;
+    @FXML
+    private MenuItem bActivarUnidad;
+    
     
     private Main application;
     
@@ -51,7 +58,10 @@ public class HomeController implements Initializable {
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //ordenList.setItems(completarOrden());
+        //ObservableList<Integer> ordenar = FXCollections.<Integer>observableArrayList(completarOrden());
+        ordenList.getItems().addAll(completarOrden());
+        logUser.setText(SeguridadService.getUsuarioLogueado().getNombre()+" "+SeguridadService.getUsuarioLogueado().getApellido());
+        inicializarMenu();
     }
     
     public void logOut(ActionEvent event){
@@ -82,8 +92,22 @@ public class HomeController implements Initializable {
 
     }    
     
-    public int[] completarOrden(){
-        int[] array = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25};
+    public ArrayList<Integer> completarOrden(){
+        ArrayList<Integer> array = new ArrayList<>();
+        for(int i = 1 ; i < 26 ; i++){
+            array.add(i);
+        }
+        
         return array;
     }
+    
+    private void inicializarMenu(){
+        bActivarUnidad.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Main.openNewWindow("Activar unidad", "views/activarUnidad.fxml", 400, 400);
+            }
+        });
+    }
+    
 }

@@ -6,17 +6,22 @@
 package ar.com.remises;
 
 import ar.com.remises.model.Constants;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.collections.ObservableMap;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.JavaFXBuilderFactory;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -33,6 +38,8 @@ public class Main extends Application {
     
     private final double MINIMUM_WINDOW_WIDTH = 450.0;
     private final double MINIMUM_WINDOW_HEIGHT = 450.0;
+    
+    private static Scene scene;
     
     @Override
     public void start(Stage primaryStage) {
@@ -90,7 +97,7 @@ public class Main extends Application {
         } finally {
             in.close();
         }
-        Scene scene = new Scene(page, width, height);
+        scene = new Scene(page, width, height);
         stage.setScene(scene);
         stage.sizeToScene();
         //stage.centerOnScreen();
@@ -125,4 +132,39 @@ public class Main extends Application {
         gotoLogin();
     }
     
+    public static Scene getScene(){
+        return scene;
+    }
+    
+    public static void setAccelerator(KeyCombination kc,Runnable a){
+        scene.getAccelerators().put(kc, a);
+    }
+    
+    public static void openNewWindow(String title,String fxml,double width, double height){
+        Parent root;
+                try {
+                    FXMLLoader loader = new FXMLLoader();
+                    InputStream in = Main.class.getResourceAsStream(fxml);
+                    loader.setBuilderFactory(new JavaFXBuilderFactory());
+                    loader.setLocation(Main.class.getResource(fxml));
+                    AnchorPane page;
+                    try {
+                        page = (AnchorPane) loader.load(in);
+                    } finally {
+                        in.close();
+                    }
+                    
+                    Stage window = new Stage();
+                    window.setTitle(title);
+                    window.setScene(new Scene(page, width, width));
+                    window.sizeToScene();
+                    window.show();
+                    // Hide this current window (if this is what you want)
+                    //((Node)(event.getSource())).getScene().getWindow().hide();
+                }
+                catch (IOException e) {
+                    e.printStackTrace();
+                }
+                
+    }
 }

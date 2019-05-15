@@ -20,9 +20,8 @@ public class ZonaService {
     public static ZonaService getZonaService(){
         if(singleton == null){
             return singleton = new ZonaService();
-        }else{
-            return singleton;
         }
+        return singleton;
     }
     
     private ZonaService(){
