@@ -50,6 +50,7 @@ public class HomeController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         inicializarObservables();
+        ordenList.setFixedCellSize(25);
         logUser.setText(SeguridadService.getUsuarioLogueado().getNombre()+" "+SeguridadService.getUsuarioLogueado().getApellido());
         inicializarMenu();
     }
