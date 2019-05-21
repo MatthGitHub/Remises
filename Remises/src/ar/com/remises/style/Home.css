@@ -703,3 +703,7 @@ and open the template in the editor.
     -fx-fill:#38424b;
     -fx-effect: dropshadow( one-pass-box , rgba(255, 255, 255, 0.6), 0, 0.0 , 0 , 1 );
 }
+
+.background .grid {
+    -fx-background-color: #343434;
+}

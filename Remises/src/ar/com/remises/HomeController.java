@@ -17,9 +17,13 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.ColumnConstraints;
+import javafx.scene.layout.GridPane;
 
 /**
  *
@@ -31,15 +35,14 @@ public class HomeController implements Initializable {
     @FXML
     private Label logUser,version;
     @FXML
-    private ListView disponibleList,zonaList,ordenList;
+    private GridPane grillaunidades;
+    //private ListView disponibleList,zonaList,ordenList;
     @FXML
     private MenuItem bActivarUnidad;
     
     private Main application;
     
     private static ObservableList<Remis> observableRemises;
-    private static ObservableList<Integer> observableOrden;
-    private static ObservableList<Zona> observableZona;
     
     private static Integer orden = 1;
     
@@ -50,7 +53,8 @@ public class HomeController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         inicializarObservables();
-        ordenList.setFixedCellSize(25);
+        
+        //ordenList.setFixedCellSize(25);
         logUser.setText(SeguridadService.getUsuarioLogueado().getNombre()+" "+SeguridadService.getUsuarioLogueado().getApellido());
         inicializarMenu();
     }
@@ -60,23 +64,13 @@ public class HomeController implements Initializable {
         observableRemises.addListener(new ListChangeListener() {
             @Override
             public void onChanged(ListChangeListener.Change c) {
-                disponibleList.getItems().add(observableRemises.get(observableRemises.size()-1));
-            }
-        });
-        
-        observableOrden = FXCollections.<Integer>observableArrayList();
-        observableOrden.addListener(new ListChangeListener() {
-            @Override
-            public void onChanged(ListChangeListener.Change c) {
-                ordenList.getItems().add(observableOrden.get(observableOrden.size()-1));
-            }
-        });
-        
-        observableZona = FXCollections.<Zona>observableArrayList();
-        observableZona.addListener(new ListChangeListener() {
-            @Override
-            public void onChanged(ListChangeListener.Change c) {
-                zonaList.getItems().add(observableZona.get(observableZona.size()-1));
+                ColumnConstraints col = new ColumnConstraints(25);
+                grillaunidades.getColumnConstraints().addAll(col);
+                grillaunidades.add(new Label(observableRemises.get(observableRemises.size()-1).getOrden().toString()),orden-1,0);
+                grillaunidades.add(new Label(observableRemises.get(observableRemises.size()-1).getUnidad().getNroUnidad().toString()),orden-1,1);
+                grillaunidades.add(new Label(observableRemises.get(observableRemises.size()-1).getZona().getNroZona().toString()),orden-1,2);
+                orden++;
+                //disponibleList.getItems().add(observableRemises.get(observableRemises.size()-1));
             }
         });
     }
@@ -101,10 +95,9 @@ public class HomeController implements Initializable {
     }
     
     public static void agregarUnidad(Remis nuevaUnidad){
-        observableOrden.add(orden);
         System.out.println("Orden: "+orden);
-        observableRemises.add(orden-1,nuevaUnidad);
-        orden++;
+        nuevaUnidad.setOrden(orden);
+        observableRemises.add(nuevaUnidad);
         System.out.println("Se agrega remo: "+nuevaUnidad.toString());
     }
     
