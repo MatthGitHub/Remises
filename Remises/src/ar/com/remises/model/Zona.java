@@ -13,14 +13,16 @@ public class Zona {
     
     private Integer nroZona;
     private String nombre;
-
+    private String color;
+    
     public Zona(){
         
     }
     
-    public Zona(Integer nroZona, String nombre) {
+    public Zona(Integer nroZona, String nombre,String color) {
         this.nroZona = nroZona;
         this.nombre = nombre;
+        this.color = color;
     }
 
     public Integer getNroZona() {
@@ -38,7 +40,13 @@ public class Zona {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
     
 }

@@ -17,6 +17,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
@@ -124,24 +125,24 @@
                   <children>
                               <VBox prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <HBox fx:id="hboxOrden" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
                                        <children>
                                           <Label text="Orden:" />
                                        </children>
-                                    </HBox>
-                          <HBox alignment="CENTER_LEFT" prefHeight="16.0" prefWidth="883.0">
-                            <children>
+                                    </Pane>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
                                           <Label text="Disponible:" />
-                            </children>
-                          </HBox>
-                                    <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="934.0">
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
                                        <children>
                                           <Label text="Zona:" />
                                        </children>
-                                    </HBox>
+                                    </Pane>
                                  </children>
                               </VBox>
-                              <ScrollPane prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+                              <ScrollPane prefHeight="131.0" prefWidth="888.0" vbarPolicy="NEVER" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.vgrow="NEVER">
                                  <content>
                                     <GridPane fx:id="grillaunidades" gridLinesVisible="true" prefHeight="132.0">
                                       <rowConstraints>
@@ -156,7 +157,6 @@
                   <columnConstraints>
                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="934.0" minWidth="10.0" prefWidth="85.0" />
                     <ColumnConstraints hgrow="SOMETIMES" maxWidth="869.0" minWidth="10.0" prefWidth="869.0" />
-                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1500.0" minWidth="19.0" prefWidth="19.0" />
                   </columnConstraints>
                   <rowConstraints>
                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />

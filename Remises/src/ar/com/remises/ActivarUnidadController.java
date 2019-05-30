@@ -14,12 +14,19 @@ import ar.com.remises.services.UnidadService;
 import ar.com.remises.services.ZonaService;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -36,7 +43,11 @@ public class ActivarUnidadController implements Initializable {
     private HBox hboxUnidad,hboxChofer,hboxZona;
     @FXML
     private Button btnActivarUnidad;
-
+    @FXML
+    private MenuItem btnCerrarActivarUnidad;
+    @FXML
+    private MenuBar mbarActivarUnidad;
+    
     private Unidad unidad;
     private Chofer chofer;
     private Zona zona;
@@ -46,7 +57,13 @@ public class ActivarUnidadController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        btnCerrarActivarUnidad.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Stage stage = (Stage) mbarActivarUnidad.getScene().getWindow();
+                stage.close();
+            }
+        });
         
     }    
     
@@ -58,8 +75,21 @@ public class ActivarUnidadController implements Initializable {
                 nroUnidad = Integer.parseInt(nroUnidadTxt);
                 unidad = UnidadService.getUnidadService().obtenerUnidadPorNumero(nroUnidad);
                 if(unidad != null){
-                    txtDetalleUnidad.setText(unidad.getMarca()+" --- "+unidad.getModelo());
-                    hboxChofer.setVisible(true);
+                    if(HomeController.verificarUnidad(unidad)){
+                        Text t = new Text();
+                        t.setText(unidad.getMarca()+" --- "+unidad.getModelo());
+                        t.setFill(Color.RED);
+                        txtDetalleUnidad.setStyle("-fx-text-inner-color: black;");
+                        txtDetalleUnidad.setText(t.getText());
+                        hboxChofer.setVisible(true);
+                    }else{
+                        Text t = new Text();
+                        t.setText(unidad.getMarca()+" --- "+unidad.getModelo()+" : ESTA UNIDAD NO ESTA DISPONIBLE");
+                        t.setFill(Color.RED);
+                        txtDetalleUnidad.setStyle("-fx-text-inner-color: red;");
+                        txtDetalleUnidad.setText(t.getText());
+                    }
+                    
                 }
             }else{
                 if(!nroUnidadTxt.trim().isEmpty()){
@@ -81,8 +111,22 @@ public class ActivarUnidadController implements Initializable {
                 nroChofer = Integer.parseInt(nroChoferTxt);
                 chofer = ChoferService.getChoferService().obtenerChoferPorNumero(nroChofer);
                 if(chofer != null){
-                    txtDetalleChofer.setText(chofer.getNombre()+" --- "+chofer.getApellido());
-                    hboxZona.setVisible(true);
+                    if(HomeController.verificarChofer(chofer)){
+                        Text t = new Text();
+                        t.setText(chofer.getNombre()+" --- "+chofer.getApellido());
+                        t.setFill(Color.RED);
+                        txtDetalleUnidad.setStyle("-fx-text-inner-color: black;");
+                        txtDetalleUnidad.setText(t.getText());
+                        hboxZona.setVisible(true);
+                    }else{
+                        Text t = new Text();
+                        t.setText(chofer.getNombre()+" --- "+chofer.getApellido()+" : ESTE CHOFER NO ESTA DISPONIBLE");
+                        t.setFill(Color.RED);
+                        txtDetalleUnidad.setStyle("-fx-text-inner-color: red;");
+                        txtDetalleUnidad.setText(t.getText());
+                        hboxZona.setVisible(true);
+                    }
+                    
                 }
             }else{
                 if(!nroChoferTxt.trim().isEmpty()){
@@ -120,12 +164,26 @@ public class ActivarUnidadController implements Initializable {
     }
     
     public void activarUnidad(){
-        Remis remis = new Remis(zona, chofer, unidad,1);
-        HomeController.agregarUnidad(remis);
+        if(!txtNroChofer.getText().isEmpty()&&!txtNroUnidad.getText().isEmpty()&&!txtNroZona.getText().isEmpty()){
+            Remis remis = new Remis(zona, chofer, unidad,1);
+            HomeController.agregarUnidad(remis);
+            limpiarFormulario();
+        }
     }
     
     private boolean validate(String text){
         return text.matches("[0-9]*");
+    }
+    
+    private void limpiarFormulario(){
+        txtNroChofer.setText("");
+        txtNroUnidad.setText("");
+        txtNroZona.setText("");
+        txtDetalleUnidad.setText("");
+        txtDetalleChofer.setText("");
+        txtDetalleZona.setText("");
+        hboxChofer.setVisible(false);
+        hboxZona.setVisible(false);
     }
     
 }

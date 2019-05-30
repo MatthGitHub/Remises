@@ -4,8 +4,12 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -133,6 +137,19 @@
             </HBox>
          </children>
       </VBox>
+      <MenuBar fx:id="mbarActivarUnidad" visible="false">
+        <menus>
+          <Menu mnemonicParsing="false">
+            <items>
+              <MenuItem fx:id="btnCerrarActivarUnidad" mnemonicParsing="false" text="Cerrar">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F2" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
       <Button fx:id="btnActivarUnidad" disable="true" layoutX="152.0" layoutY="339.0" mnemonicParsing="false" onAction="#activarUnidad" prefHeight="26.0" prefWidth="106.0" text="Activar" />
    </children>
 </AnchorPane>
