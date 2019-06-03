@@ -579,6 +579,10 @@ and open the template in the editor.
     -fx-mark-color: white;  
 } 
 
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
 .scroll-bar{
     -fx-background-color: rgb(96,96,96);
     -fx-background-radius: 2em;

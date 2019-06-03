@@ -114,11 +114,11 @@
                     <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                   </columnResizePolicy>
                   <columns>
-                    <TableColumn fx:id="estadoColumn" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" resizable="false" text="" />
-                    <TableColumn fx:id="idLineaColumn" maxWidth="35.0" minWidth="35.0" prefWidth="35.0" text="Id" />
-                    <TableColumn fx:id="descLineaColumn" maxWidth="600.0" minWidth="180.0" prefWidth="180.0" text="Descripción" />
-                    <TableColumn fx:id="protoColumn" maxWidth="65.0" minWidth="65.0" prefWidth="65.0" resizable="false" text="Proto." />
-                    <TableColumn fx:id="accionesColumn" maxWidth="5000.0" minWidth="310.0" prefWidth="310.0" text="Acciones" />
+                    <TableColumn fx:id="idLineaColumn" maxWidth="35.0" minWidth="35.0" prefWidth="35.0" resizable="false" text="Nº" />
+                    <TableColumn fx:id="descLineaColumn" maxWidth="100.0" minWidth="47.0" prefWidth="79.0" resizable="false" text="Hr Pe" />
+                    <TableColumn fx:id="protoColumn" maxWidth="430.0" minWidth="65.0" prefWidth="394.0" resizable="false" text="Origen" />
+                    <TableColumn fx:id="accionesColumn" maxWidth="483.0" minWidth="65.0" prefWidth="399.0" resizable="false" text="Destino" />
+                              <TableColumn fx:id="accionesColumn1" maxWidth="250.0" minWidth="0.0" prefWidth="65.0" resizable="false" text="Mov" />
                   </columns>
                 </TableView>
                 <GridPane GridPane.columnIndex="1" GridPane.rowIndex="0">
@@ -142,7 +142,7 @@
                                     </Pane>
                                  </children>
                               </VBox>
-                              <ScrollPane prefHeight="131.0" prefWidth="888.0" vbarPolicy="NEVER" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.vgrow="NEVER">
+                              <ScrollPane prefHeight="131.0" prefWidth="888.0" styleClass="background" stylesheets="@../style/Home.css" vbarPolicy="NEVER" vmax="0.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.vgrow="NEVER">
                                  <content>
                                     <GridPane fx:id="grillaunidades" gridLinesVisible="true" prefHeight="132.0">
                                       <rowConstraints>

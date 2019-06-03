@@ -88,6 +88,7 @@ public class ActivarUnidadController implements Initializable {
                         t.setFill(Color.RED);
                         txtDetalleUnidad.setStyle("-fx-text-inner-color: red;");
                         txtDetalleUnidad.setText(t.getText());
+                        limpiarFormulario(2);
                     }
                     
                 }
@@ -115,16 +116,17 @@ public class ActivarUnidadController implements Initializable {
                         Text t = new Text();
                         t.setText(chofer.getNombre()+" --- "+chofer.getApellido());
                         t.setFill(Color.RED);
-                        txtDetalleUnidad.setStyle("-fx-text-inner-color: black;");
-                        txtDetalleUnidad.setText(t.getText());
+                        txtDetalleChofer.setStyle("-fx-text-inner-color: black;");
+                        txtDetalleChofer.setText(t.getText());
                         hboxZona.setVisible(true);
                     }else{
                         Text t = new Text();
                         t.setText(chofer.getNombre()+" --- "+chofer.getApellido()+" : ESTE CHOFER NO ESTA DISPONIBLE");
                         t.setFill(Color.RED);
-                        txtDetalleUnidad.setStyle("-fx-text-inner-color: red;");
-                        txtDetalleUnidad.setText(t.getText());
+                        txtDetalleChofer.setStyle("-fx-text-inner-color: red;");
+                        txtDetalleChofer.setText(t.getText());
                         hboxZona.setVisible(true);
+                        limpiarFormulario(3);
                     }
                     
                 }
@@ -167,7 +169,7 @@ public class ActivarUnidadController implements Initializable {
         if(!txtNroChofer.getText().isEmpty()&&!txtNroUnidad.getText().isEmpty()&&!txtNroZona.getText().isEmpty()){
             Remis remis = new Remis(zona, chofer, unidad,1);
             HomeController.agregarUnidad(remis);
-            limpiarFormulario();
+            limpiarFormulario(1);
         }
     }
     
@@ -175,15 +177,31 @@ public class ActivarUnidadController implements Initializable {
         return text.matches("[0-9]*");
     }
     
-    private void limpiarFormulario(){
-        txtNroChofer.setText("");
-        txtNroUnidad.setText("");
-        txtNroZona.setText("");
-        txtDetalleUnidad.setText("");
-        txtDetalleChofer.setText("");
-        txtDetalleZona.setText("");
-        hboxChofer.setVisible(false);
-        hboxZona.setVisible(false);
+    private void limpiarFormulario(Integer choose){
+        
+        switch(choose){
+            case 1: 
+                txtNroChofer.setText("");
+                txtNroUnidad.setText("");
+                txtNroZona.setText("");
+                txtDetalleUnidad.setText("");
+                txtDetalleChofer.setText("");
+                txtDetalleZona.setText("");
+                hboxChofer.setVisible(false);
+                hboxZona.setVisible(false);
+                break;
+            case 2:
+                txtNroChofer.setText("");
+                hboxChofer.setVisible(false);
+                txtNroZona.setText("");
+                hboxZona.setVisible(false);
+                break;
+            case 3:
+                txtNroZona.setText("");
+                hboxZona.setVisible(false);
+                break;
+        }
+        
     }
     
 }
