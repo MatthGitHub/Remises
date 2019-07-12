@@ -82,6 +82,7 @@ public class ActivarUnidadController implements Initializable {
                         txtDetalleUnidad.setStyle("-fx-text-inner-color: black;");
                         txtDetalleUnidad.setText(t.getText());
                         hboxChofer.setVisible(true);
+                        txtNroChofer.requestFocus();;
                     }else{
                         Text t = new Text();
                         t.setText(unidad.getMarca()+" --- "+unidad.getModelo()+" : ESTA UNIDAD NO ESTA DISPONIBLE");
@@ -119,6 +120,7 @@ public class ActivarUnidadController implements Initializable {
                         txtDetalleChofer.setStyle("-fx-text-inner-color: black;");
                         txtDetalleChofer.setText(t.getText());
                         hboxZona.setVisible(true);
+                        txtNroZona.requestFocus();
                     }else{
                         Text t = new Text();
                         t.setText(chofer.getNombre()+" --- "+chofer.getApellido()+" : ESTE CHOFER NO ESTA DISPONIBLE");
@@ -152,6 +154,7 @@ public class ActivarUnidadController implements Initializable {
                 if(zona != null){
                     txtDetalleZona.setText(zona.getNombre());
                     btnActivarUnidad.setDisable(false);
+                    btnActivarUnidad.requestFocus();
                 }
             }else{
                 if(!nroZonaTxt.trim().isEmpty()){
@@ -170,6 +173,7 @@ public class ActivarUnidadController implements Initializable {
             Remis remis = new Remis(zona, chofer, unidad,1);
             HomeController.agregarUnidad(remis);
             limpiarFormulario(1);
+            txtNroUnidad.requestFocus();
         }
     }
     
@@ -189,16 +193,19 @@ public class ActivarUnidadController implements Initializable {
                 txtDetalleZona.setText("");
                 hboxChofer.setVisible(false);
                 hboxZona.setVisible(false);
+                btnActivarUnidad.setDisable(true);
                 break;
             case 2:
                 txtNroChofer.setText("");
                 hboxChofer.setVisible(false);
                 txtNroZona.setText("");
                 hboxZona.setVisible(false);
+                btnActivarUnidad.setDisable(true);
                 break;
             case 3:
                 txtNroZona.setText("");
                 hboxZona.setVisible(false);
+                btnActivarUnidad.setDisable(true);
                 break;
         }
         

@@ -49,7 +49,7 @@
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <TextArea fx:id="txtDetalleUnidad" editable="false" prefHeight="50.0" prefWidth="458.0" wrapText="true" />
+                              <TextArea fx:id="txtDetalleUnidad" disable="true" editable="false" prefHeight="50.0" prefWidth="458.0" wrapText="true" />
                            </children>
                         </HBox>
                      </children>
@@ -87,7 +87,7 @@
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <TextArea fx:id="txtDetalleChofer" editable="false" prefHeight="50.0" prefWidth="458.0" wrapText="true" />
+                              <TextArea fx:id="txtDetalleChofer" disable="true" editable="false" prefHeight="50.0" prefWidth="458.0" wrapText="true" />
                            </children>
                         </HBox>
                      </children>
@@ -125,7 +125,7 @@
                         </HBox>
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <TextArea fx:id="txtDetalleZona" editable="false" prefHeight="50.0" prefWidth="458.0" wrapText="true" />
+                              <TextArea fx:id="txtDetalleZona" disable="true" editable="false" prefHeight="50.0" prefWidth="458.0" wrapText="true" />
                            </children>
                         </HBox>
                      </children>

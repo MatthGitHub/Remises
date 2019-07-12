@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="eventContainer" prefHeight="200.0" prefWidth="400.0" styleClass="background_acerca" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ar.com.remises.AcercaDeController">
+    <children>
+        <VBox spacing="0.0" styleClass="vboxEventOutside" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER" prefHeight="184.0" prefWidth="390.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/cenergon-logo.png" />
+                     </image>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </ImageView>
+               </children>
+            </HBox>
+            <VBox alignment="TOP_CENTER" prefHeight="51.0" prefWidth="370.0">
+               <children>
+                  <Label text="Desarrollado por Cenergon" />
+                  <Label fx:id="version" text="* Version *" />
+               </children></VBox>
+         </children>
+        </VBox>
+    </children>
+    <stylesheets>
+        <URL value="@../style/Home.css" />
+    </stylesheets>  
+</AnchorPane>

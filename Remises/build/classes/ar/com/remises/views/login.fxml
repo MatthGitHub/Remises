@@ -41,9 +41,9 @@
                         <Pane fx:id="loginSicom" layoutX="-2.0" layoutY="38.0" opacity="1.0" prefHeight="162.0" prefWidth="470.0" visible="true">
                            <children>
                               <Label id="label1" layoutX="18.0" layoutY="60.0" text="Usuario" />
-                              <TextField id="textField1" fx:id="usuario" layoutX="4.0" layoutY="79.0" prefWidth="225.0" promptText="usuario" text="" />
+                              <TextField id="textField1" fx:id="usuario" layoutX="4.0" layoutY="79.0" prefWidth="225.0" promptText="usuario" text="mbenditti" />
                               <Label id="label1" layoutX="259.0" layoutY="60.0" text="Contraseña" visible="true" />
-                              <PasswordField id="passwordField1" fx:id="password" layoutX="249.0" layoutY="79.0" prefWidth="225.0" promptText="contraseña" text="" />
+                              <PasswordField id="passwordField1" fx:id="password" layoutX="249.0" layoutY="79.0" prefWidth="225.0" promptText="contraseña" text="mbenditti" />
                               <Button id="button1" fx:id="login" defaultButton="true" layoutX="307.0" layoutY="132.0" minHeight="31.0" onAction="#processLogin" prefHeight="31.0" prefWidth="167.0" text="Login" />
                            </children>
                            <rotationAxis>

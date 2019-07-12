@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ed750ff1-8cc1-4cf5-9211-89d0a942b91d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/nbproject/jfx-impl_backup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Menues.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Menues.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ar/com/remises/ActivarUnidadController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/ar/com/remises/ActivarUnidadController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ar/com/remises/HomeController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/ar/com/remises/HomeController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ar/com/remises/HomeController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/ar/com/remises/HomeController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ar/com/remises/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/ar/com/remises/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ar/com/remises/services/ZonaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/ar/com/remises/services/ZonaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ar/com/remises/views/activarUnidad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/ar/com/remises/views/activarUnidad.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ar/com/remises/views/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/ar/com/remises/views/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/ar/com/remises/views/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/ar/com/remises/views/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/Remises.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Remises.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/Remises.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Remises.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/Remises.jnlp" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Remises.jnlp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/jfx-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/jfx-impl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ar/com/remises/ActivarUnidadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ar/com/remises/ActivarUnidadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ar/com/remises/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ar/com/remises/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ar/com/remises/services/ZonaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ar/com/remises/services/ZonaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ar/com/remises/views/activarUnidad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ar/com/remises/views/activarUnidad.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ar/com/remises/views/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ar/com/remises/views/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ar/com/remises/views/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ar/com/remises/views/login.fxml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ar/com/remises/HomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="147" column="25" lean-forward="true" selection-start-line="147" selection-start-column="25" selection-end-line="147" selection-end-column="25" />
+              <folding>
+                <element signature="e#2409#2416#0" expanded="true" />
+                <element signature="e#9503#9504#0" expanded="true" />
+                <element signature="e#9579#9580#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/ar/com/remises/HomeController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="45" />
+    <option name="y" value="23" />
+    <option name="width" value="1395" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Remises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Remises" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Remises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Remises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Remises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Remises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="remises" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Remises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Remises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="remises" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Remises" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Remises" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="remises" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.com.remises.Main" />
+      <module name="Remises" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.com.remises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed750ff1-8cc1-4cf5-9211-89d0a942b91d" name="Default Changelist" comment="" />
+      <created>1562531273130</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562531273130</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="45" y="23" width="1395" height="877" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20251293" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.3299363" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31082803" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ar/com/remises/views/activarUnidad.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Remises.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ar/com/remises/model/Asignacion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="407" column="19" selection-start-line="407" selection-start-column="19" selection-end-line="407" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/TableCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="335" column="26" selection-start-line="335" selection-start-column="26" selection-end-line="335" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ar/com/remises/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="147" column="25" lean-forward="true" selection-start-line="147" selection-start-column="25" selection-end-line="147" selection-end-column="25" />
+          <folding>
+            <element signature="e#2409#2416#0" expanded="true" />
+            <element signature="e#9503#9504#0" expanded="true" />
+            <element signature="e#9579#9580#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

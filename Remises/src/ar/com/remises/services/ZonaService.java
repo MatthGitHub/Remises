@@ -35,7 +35,7 @@ public class ZonaService {
         zonas.add(new Zona(1,"Centro","green"));
         zonas.add(new Zona(2,"Alto","red"));
         zonas.add(new Zona(3,"Kilometros","blue"));
-        zonas.add(new Zona(4,"Peninsula","rose"));
+        zonas.add(new Zona(4,"Peninsula","aqua"));
         zonas.add(new Zona(5,"Dina Huapi","yellow"));
 
         return zonas;
